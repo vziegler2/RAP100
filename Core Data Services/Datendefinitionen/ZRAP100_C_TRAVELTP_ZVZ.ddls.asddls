@@ -35,7 +35,7 @@ define root view entity ZRAP100_C_TRAVELTP_zvz
       @ObjectModel.text.element: ['OverallStatusText'] //case-sensitive
       @Consumption.valueHelpDefinition: [{ entity: {name: '/DMO/I_Overall_Status_VH', element: 'OverallStatus' }, useForValidation: true }]
       OverallStatus,
-      _OverallStatus._Text.Text as OverallStatusText : localized,
+      _OverallStatus.Text as OverallStatusText,
 
       Attachment,
       MimeType,
