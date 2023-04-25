@@ -14,7 +14,7 @@ CLASS zcl_rap100_gen_data_zvz IMPLEMENTATION.
 
   METHOD if_oo_adt_classrun~main.
     DATA:
-      group_id   TYPE string VALUE 'zvz',
+      group_id   TYPE string VALUE 'ZVZ',
       attachment TYPE /dmo/attachment,
       file_name  TYPE /dmo/filename,
       mime_type  TYPE /dmo/mime_type.
@@ -51,6 +51,7 @@ CLASS zcl_rap100_gen_data_zvz IMPLEMENTATION.
             travel~lastchangedby    AS last_changed_by,
             travel~lastchangedat    AS last_changed_at,
             travel~lastchangedat    AS local_last_changed_at
+            WHERE travel_id > 0
             ORDER BY travel_id UP TO 10 ROWS
       ).
     COMMIT WORK.
